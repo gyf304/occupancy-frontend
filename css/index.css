@@ -1,0 +1,38 @@
+.cmu-red {
+  background-color: #bb0000 !important;
+}
+
+/* web app specific hacks... */
+.web-app .nav-wrapper {
+  height: 56px; 
+  line-height: 56px;
+}
+
+.web-app nav {
+  height: 76px; /* originally 56px */
+  line-height: 76px;
+  padding-top: 20px;
+}
+
+.web-app .navbar-fixed {
+  height: 76px;
+}
+
+body.web-app {
+  position: fixed;
+  height: 100%;
+  overflow: hidden;
+}
+
+.web-app #content-wrapper {
+  width: 100vw;
+  height: calc(100vh - 76px);
+  overflow-y: scroll;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+
+.web-app * {
+  -webkit-touch-callout: none !important;
+  -webkit-user-select: none !important;
+}

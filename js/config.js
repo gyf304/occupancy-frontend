@@ -1,11 +1,12 @@
 occupancy = {};
 occupancy.config = {
   server: 'http://cmu-occupancy.herokuapp.com:80',
-  title: 'CMU Occupancy',
+  title: 'Occupancy',
   updateInterval: 30,
   infoCards: [{
     'title': 'More coming',
-    'contentHtml': '<p>Other locations will be added soon</p>'
+    'contentHtml': '<p>Other locations will be added soon</p>',
+    'img': 'http://lorempixel.com/800/400/cats/'
   }],
   aboutHtml: '<p>Project made by Yifan Gu</p>' + 
     '<p>Donate using <a href="https://venmo.com/?txn=pay&recipients=yifan-gu&note=Donation%20for%20Occupancy%20App">Venmo</a></p>' +
