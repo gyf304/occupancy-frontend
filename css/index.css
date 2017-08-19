@@ -35,4 +35,5 @@ body.web-app {
 .web-app * {
   -webkit-touch-callout: none !important;
   -webkit-user-select: none !important;
+  user-select: none !important;
 }
