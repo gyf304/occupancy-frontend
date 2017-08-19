@@ -18,12 +18,6 @@
   height: 76px;
 }
 
-body.web-app {
-  position: fixed;
-  height: 100%;
-  overflow: hidden;
-}
-
 .web-app #content-wrapper {
   width: 100vw;
   height: calc(100vh - 76px);
