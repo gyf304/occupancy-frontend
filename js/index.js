@@ -11,7 +11,7 @@ occupancy.populateLocations = function(){
   .then(function(response){
     occupancy.data.locations = response.data;
   });
-}
+};
 
 occupancy.updateLocations = function(){
   for (var i = 0; i < occupancy.data.locations.length; i++) {
@@ -29,7 +29,7 @@ occupancy.app = new Vue({
   methods: {
     'moment': moment
   }
-})
+});
 
 window.onload = function(){
   // iOS detected, iOS detection from: http://stackoverflow.com/a/9039885/177710
@@ -50,8 +50,7 @@ window.onload = function(){
   $('.modal').modal();
   FastClick.attach(document.body);
 
-  occupancy.populateLocations()
-  .then(occupancy.updateLocations);
+  occupancy.populateLocations().then(occupancy.updateLocations);
   
   window.setInterval(occupancy.updateLocations, occupancy.config.updateInterval * 1000);
 };
