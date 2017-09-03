@@ -59,7 +59,7 @@
               <div class="card-reveal">
                 <span class="card-title grey-text text-darken-4">Detail<i class="material-icons right">close</i></span>
                 <div v-if="location.occupancy">
-                  <p>Population estimate: {{location.occupancy.estimate.toPrecision(2)}}±{{location.occupancy.error.toPrecision(2)}}</p>
+                  <p>Population estimate: {{location.occupancy.estimate.toPrecision(4)}}±{{location.occupancy.error.toPrecision(3)}}</p>
                 </div>
               </div>
             </div>
