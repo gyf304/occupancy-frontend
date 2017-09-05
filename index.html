@@ -48,7 +48,7 @@
                   <div class="progress">
                       <div class="determinate" v-bind:style="'width:'+Math.min(location.occupancy.estimate / location.capacity * 100, 100)+'%'"></div>
                   </div>
-                  <p>{{(location.occupancy.estimate / location.capacity * 100).toPrecision(2)}}% Full</p>
+                  <p>{{Math.min(100, Math.round(location.occupancy.estimate / location.capacity * 100))}}% Full</p>
                   <p>Last update was {{moment(location.occupancy.time).fromNow()}}</p>
                   <p v-if="location.occupancy.degraded">System is <strong>degraded</strong>: Sensor(s) missing, reading can be inaccurate.</p>
                 </div>
