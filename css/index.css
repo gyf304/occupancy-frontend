@@ -9,18 +9,28 @@
 }
 
 .web-app nav {
-  height: 76px; /* originally 56px */
+  height: 76px;
+  height: calc(56px + constant(safe-area-inset-top)); /* For iOS 11 and up */
+  height: calc(56px + env(safe-area-inset-top));
   line-height: 76px;
+  line-height: calc(56px + constant(safe-area-inset-top));
+  line-height: calc(56px + env(safe-area-inset-top));
   padding-top: 20px;
+  padding-top: constant(safe-area-inset-top);
+  padding-top: env(safe-area-inset-top);
 }
 
 .web-app .navbar-fixed {
   height: 76px;
+  height: calc(56px + constant(safe-area-inset-top));
+  height: calc(56px + env(safe-area-inset-top));
 }
 
 .web-app #content-wrapper {
   width: 100vw;
   height: calc(100vh - 76px);
+  height: calc(100vh - 56px - constant(safe-area-inset-top));
+  height: calc(100vh - 56px - env(safe-area-inset-top));
   overflow-y: scroll;
   overflow-x: hidden;
   -webkit-overflow-scrolling: touch;
